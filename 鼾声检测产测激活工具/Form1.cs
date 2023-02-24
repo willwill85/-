@@ -42,10 +42,12 @@ namespace 鼾声检测产测激活工具
             if (res == "FAIL")
             {
                // textBox_ACTLOG.Text += "网络错误！\n";
+               //这里不单独处理了
             }
             else if (res == "-1")
             {
-              //  textBox_ACTLOG.Text += "不存在这个用户！\n";
+                //  textBox_ACTLOG.Text += "不存在这个用户！\n";
+                //这里不单独处理了
             }
             else
             {
@@ -58,7 +60,7 @@ namespace 鼾声检测产测激活工具
             }
 
         }
-
+        //连接串口
         private void button_COM_Click(object sender, EventArgs e)
         {
             try
@@ -75,7 +77,7 @@ namespace 鼾声检测产测激活工具
             }
         }
 
-       
+       //串口收到数据处理方法
         private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
         {
             if (debug)
@@ -114,7 +116,7 @@ namespace 鼾声检测产测激活工具
                 uartdata = serialPort1.ReadLine().Replace("\n","");
             }
         }
-
+        //测试按钮
         private void button_TEST_Click(object sender, EventArgs e)
         {
             if (serialPort1.IsOpen)
@@ -131,7 +133,7 @@ namespace 鼾声检测产测激活工具
                 MessageBox.Show("请打开串口");
             }
         }
-
+        //激活按钮
         private void button_ACT_Click(object sender, EventArgs e)
         {
             byte[] data = { 0xFA, 0x02, 0x12, 0x34 };
