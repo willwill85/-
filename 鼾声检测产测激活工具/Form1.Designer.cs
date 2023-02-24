@@ -58,6 +58,7 @@
             this.button_TEST = new System.Windows.Forms.Button();
             this.label_CUSTOM = new System.Windows.Forms.Label();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.listBox2 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_CHART)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -86,7 +87,7 @@
             this.textBox_UARTLOG.Location = new System.Drawing.Point(16, 269);
             this.textBox_UARTLOG.Multiline = true;
             this.textBox_UARTLOG.Name = "textBox_UARTLOG";
-            this.textBox_UARTLOG.Size = new System.Drawing.Size(325, 216);
+            this.textBox_UARTLOG.Size = new System.Drawing.Size(325, 221);
             this.textBox_UARTLOG.TabIndex = 2;
             // 
             // label1
@@ -164,9 +165,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBox_SERVER);
-            this.groupBox1.Location = new System.Drawing.Point(375, 56);
+            this.groupBox1.Location = new System.Drawing.Point(368, 42);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(410, 495);
+            this.groupBox1.Size = new System.Drawing.Size(410, 503);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "激活";
@@ -177,7 +178,7 @@
             this.listBox1.ItemHeight = 12;
             this.listBox1.Location = new System.Drawing.Point(14, 246);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(390, 232);
+            this.listBox1.Size = new System.Drawing.Size(374, 244);
             this.listBox1.TabIndex = 19;
             // 
             // label13
@@ -266,7 +267,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.textBox_UARTLOG);
-            this.groupBox2.Location = new System.Drawing.Point(12, 48);
+            this.groupBox2.Location = new System.Drawing.Point(5, 42);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(357, 503);
             this.groupBox2.TabIndex = 12;
@@ -310,6 +311,7 @@
             this.textBox_MAX.Size = new System.Drawing.Size(70, 21);
             this.textBox_MAX.TabIndex = 13;
             this.textBox_MAX.Text = "10000";
+            this.textBox_MAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox_MIN
             // 
@@ -318,6 +320,7 @@
             this.textBox_MIN.Size = new System.Drawing.Size(70, 21);
             this.textBox_MIN.TabIndex = 12;
             this.textBox_MIN.Text = "1000";
+            this.textBox_MIN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // button_TEST
             // 
@@ -334,7 +337,7 @@
             // 
             this.label_CUSTOM.AutoSize = true;
             this.label_CUSTOM.Font = new System.Drawing.Font("黑体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label_CUSTOM.Location = new System.Drawing.Point(712, 23);
+            this.label_CUSTOM.Location = new System.Drawing.Point(711, 17);
             this.label_CUSTOM.Name = "label_CUSTOM";
             this.label_CUSTOM.Size = new System.Drawing.Size(51, 20);
             this.label_CUSTOM.TabIndex = 19;
@@ -344,11 +347,21 @@
             // 
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 12;
+            this.listBox2.Location = new System.Drawing.Point(784, 46);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(369, 496);
+            this.listBox2.TabIndex = 20;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(797, 568);
+            this.ClientSize = new System.Drawing.Size(783, 552);
+            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.label_CUSTOM);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -399,6 +412,7 @@
         private System.Windows.Forms.Label label_CUSTOM;
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }
 

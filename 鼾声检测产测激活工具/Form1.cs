@@ -84,7 +84,25 @@ namespace 鼾声检测产测激活工具
             {
                 string temp = serialPort1.ReadLine();
                 //textBox_UARTLOG.Text = temp+ "\n" + textBox_UARTLOG.Text;
-                data.Add(float.Parse(temp));
+                try
+                {
+                    data.Add(float.Parse(temp));
+                }
+                catch
+                {
+                    textBox_UARTLOG.Text = "串口接收格式有问题,请检查固件\n";
+                    return;
+                }
+                try
+                {
+                    int a = int.Parse(textBox_MAX.Text);
+                    a = int.Parse(textBox_MIN.Text);
+                }
+                catch
+                {
+                    textBox_UARTLOG.Text = "最大，最小值输入有错误\n";
+                    return;
+                }
                 data.RemoveAt(0);
                 //显示图形
                 pictureBox_CHART.Image = display.getimage_s(pictureBox_CHART.Width, pictureBox_CHART.Height, data.ToArray(), Color.Orange, 100, 30000);
@@ -114,6 +132,7 @@ namespace 鼾声检测产测激活工具
             else
             {
                 uartdata = serialPort1.ReadLine().Replace("\n","");
+                listBox2.Items.Insert(0, uartdata);
             }
         }
         //测试按钮
@@ -144,6 +163,11 @@ namespace 鼾声检测产测激活工具
             }
             serialPort1.Write(data, 0, 4);
             Thread.Sleep(300);
+            if (uartdata.Length < 10)
+            {
+                listBox1.Items.Insert(0, DateTime.Now.ToShortTimeString() + ":设备ID获取失败！");
+                return;
+            }
             string para = "/get_lic?API_KEY=" + textBox_APIKEY.Text+ "&DEV_ID="+ uartdata;
             string did = uartdata;
             string res=webget.get_res(textBox_SERVER.Text, para);

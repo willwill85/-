@@ -19,8 +19,9 @@ namespace 鼾声检测产测激活工具
                 string res = wc.DownloadString(server + para);
                 return res;
             }
-            catch
+            catch(Exception e)
             {
+                //System.Windows.Forms.MessageBox.Show(server+para+" "+e.ToString());
                 return "FAIL";
             }
         }
