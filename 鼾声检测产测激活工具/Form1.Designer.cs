@@ -40,6 +40,7 @@
             this.pictureBox_CHART = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label13 = new System.Windows.Forms.Label();
             this.button_ACT = new System.Windows.Forms.Button();
             this.label_TODAY = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@
             this.button_TEST = new System.Windows.Forms.Button();
             this.label_CUSTOM = new System.Windows.Forms.Label();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_CHART)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -65,15 +65,15 @@
             // 
             // textBox_COM
             // 
-            this.textBox_COM.Location = new System.Drawing.Point(12, 11);
+            this.textBox_COM.Location = new System.Drawing.Point(12, 10);
             this.textBox_COM.Name = "textBox_COM";
-            this.textBox_COM.Size = new System.Drawing.Size(100, 21);
+            this.textBox_COM.Size = new System.Drawing.Size(56, 21);
             this.textBox_COM.TabIndex = 0;
             this.textBox_COM.Text = "COM4";
             // 
             // button_COM
             // 
-            this.button_COM.Location = new System.Drawing.Point(129, 10);
+            this.button_COM.Location = new System.Drawing.Point(74, 9);
             this.button_COM.Name = "button_COM";
             this.button_COM.Size = new System.Drawing.Size(75, 23);
             this.button_COM.TabIndex = 1;
@@ -130,7 +130,7 @@
             this.textBox_SERVER.Name = "textBox_SERVER";
             this.textBox_SERVER.Size = new System.Drawing.Size(269, 21);
             this.textBox_SERVER.TabIndex = 7;
-            this.textBox_SERVER.Text = "http://127.0.0.1:8080";
+            this.textBox_SERVER.Text = "http://121.40.62.199";
             // 
             // pictureBox_CHART
             // 
@@ -171,6 +171,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "激活";
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 12;
+            this.listBox1.Location = new System.Drawing.Point(14, 246);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(390, 232);
+            this.listBox1.TabIndex = 19;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -182,6 +191,7 @@
             // 
             // button_ACT
             // 
+            this.button_ACT.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button_ACT.Location = new System.Drawing.Point(280, 121);
             this.button_ACT.Name = "button_ACT";
             this.button_ACT.Size = new System.Drawing.Size(108, 64);
@@ -229,7 +239,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 147);
+            this.label6.Location = new System.Drawing.Point(14, 115);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 12);
             this.label6.TabIndex = 9;
@@ -238,7 +248,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 115);
+            this.label4.Location = new System.Drawing.Point(14, 147);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 12);
             this.label4.TabIndex = 8;
@@ -311,6 +321,7 @@
             // 
             // button_TEST
             // 
+            this.button_TEST.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button_TEST.Location = new System.Drawing.Point(266, 22);
             this.button_TEST.Name = "button_TEST";
             this.button_TEST.Size = new System.Drawing.Size(75, 48);
@@ -332,15 +343,6 @@
             // serialPort1
             // 
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(14, 246);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(390, 232);
-            this.listBox1.TabIndex = 19;
             // 
             // Form1
             // 
