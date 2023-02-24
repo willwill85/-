@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1300
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "鼾声检测产测激活工具", "鼾声检测产测激活工具\鼾声检测产测激活工具.csproj", "{779230E5-A545-4BB0-9A18-178B86F62520}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{779230E5-A545-4BB0-9A18-178B86F62520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{779230E5-A545-4BB0-9A18-178B86F62520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{779230E5-A545-4BB0-9A18-178B86F62520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{779230E5-A545-4BB0-9A18-178B86F62520}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5EFAA92-1743-4F76-BF67-61F52C6A72EC}
+	EndGlobalSection
+EndGlobal
