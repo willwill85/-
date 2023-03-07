@@ -360,7 +360,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 552);
+            this.ClientSize = new System.Drawing.Size(1158, 552);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.label_CUSTOM);
             this.Controls.Add(this.groupBox2);

@@ -163,9 +163,17 @@ namespace 鼾声检测产测激活工具
             }
             serialPort1.Write(data, 0, 4);
             Thread.Sleep(300);
+            serialPort1.Write(data, 0, 4);
+            Thread.Sleep(300);
+
             if (uartdata.Length < 10)
             {
                 listBox1.Items.Insert(0, DateTime.Now.ToShortTimeString() + ":设备ID获取失败！");
+                return;
+            }
+            if (uartdata.Length != 33)
+            {
+                listBox1.Items.Insert(0, DateTime.Now.ToShortTimeString() + ":获取ID长度异常，请重试！");
                 return;
             }
             string para = "/get_lic?API_KEY=" + textBox_APIKEY.Text+ "&DEV_ID="+ uartdata;
