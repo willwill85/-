@@ -59,6 +59,8 @@
             this.label_CUSTOM = new System.Windows.Forms.Label();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.listBox2 = new System.Windows.Forms.ListBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_CHART)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -184,7 +186,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(14, 212);
+            this.label13.Location = new System.Drawing.Point(14, 225);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(53, 12);
             this.label13.TabIndex = 18;
@@ -351,16 +353,37 @@
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 12;
-            this.listBox2.Location = new System.Drawing.Point(784, 46);
+            this.listBox2.Location = new System.Drawing.Point(801, 70);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(369, 496);
+            this.listBox2.Size = new System.Drawing.Size(352, 472);
             this.listBox2.TabIndex = 20;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(799, 55);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 12);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "UART RAW LOG";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(778, 232);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(17, 83);
+            this.button1.TabIndex = 21;
+            this.button1.Text = ">";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1158, 552);
+            this.ClientSize = new System.Drawing.Size(792, 552);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.label_CUSTOM);
             this.Controls.Add(this.groupBox2);
@@ -413,6 +436,8 @@
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
     }
 }
 

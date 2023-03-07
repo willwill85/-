@@ -212,6 +212,21 @@ namespace 鼾声检测产测激活工具
             update_status();
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (button1.Text == ">")
+            {
+                button1.Text = "<";
+                this.Width = 1176;
+            }
+            else
+            {
+                button1.Text = ">";
+                this.Width = 808;
+            }
+
+        }
     }
 
 }
